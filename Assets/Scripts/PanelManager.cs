@@ -30,16 +30,16 @@ public class PanelManager : Singleton<PanelManager>
     /// </summary>
     /// <param name="pos">判定したい位置</param>
     /// <returns>パネルがあった場合パネルの名前が帰ってくる</returns>
-    public string GetJugePos(Vector3 pos)
+    public PanelTypeEnum.PanelType GetJugePos(Vector3 pos)
     {
         foreach (Transform child in panelList)
         {
             if (child.localPosition == pos)
             {
-                return child.name;
+                return child.GetComponent<PanelContllore>().GetPanelType;
             }
         }
 
-        return null;
+        return PanelTypeEnum.PanelType.None;
     }
 }

@@ -6,7 +6,10 @@ public class PanelContllore : MonoBehaviour
 {
 
     [SerializeField]
-    private PanelTypeEnum.PanelType panelType;
+    public PanelTypeEnum.PanelType panelType;
+
+
+    public PanelTypeEnum.PanelType GetPanelType { get { return panelType; } }
 
     [SerializeField]
     private bool isStartPanel;
