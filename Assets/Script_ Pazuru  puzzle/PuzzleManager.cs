@@ -167,7 +167,7 @@ public class PuzzleManager : Singleton<PuzzleManager>
 
         if (downPso == null && rightPso == null && leftPso == null && upPso != null)
         {
-            SceneContlloer.scenechenge(1);
+            GameObject.Find("PC1").GetComponent<startPC>().setStart(true);
         }
 
     }
