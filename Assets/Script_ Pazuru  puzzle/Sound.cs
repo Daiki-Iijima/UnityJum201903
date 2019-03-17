@@ -17,8 +17,14 @@ public class Sound : MonoBehaviour
         for (int i = 0; i < sound.Length; i++)
         {
             gameObject.AddComponent<AudioSource>().clip = sound[i];
+
         }
         sources = gameObject.GetComponents<AudioSource>();
+
+        for (int i = 0; i < sources.Length; i++)
+        {
+            sources[i].volume = 0.2f;
+        }
         sources[0].loop = true;
         sources[0].Play();
     }

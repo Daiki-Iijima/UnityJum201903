@@ -109,7 +109,7 @@ public class PuzzleManager : Singleton<PuzzleManager>
 
                 if (nullPos.localPosition.x == child.localPosition.x)
                 {
-
+                    
                     if (nullPos.localPosition.y < child.localPosition.y)
                     {
                         if (upPso == null)
@@ -158,7 +158,6 @@ public class PuzzleManager : Singleton<PuzzleManager>
                     }
                 }
             }
-
         }
 
         if (upPso != null)
