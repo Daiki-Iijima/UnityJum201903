@@ -16,14 +16,22 @@ public class PlayerContllore : MonoBehaviour
 
     private float startMove;
 
+    private bool newGool;
+
     public void setStartMove(float startMove)
     {
         this.startMove = startMove;
     }
 
+    public bool getNewGool()
+    {
+        return newGool;
+    }
+
     // Use this for initialization
     void Start()
     {
+        newGool = false;
         nowMoving = false;
     }
 
@@ -31,7 +39,10 @@ public class PlayerContllore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (PanelManager.Instance.GetGoolPos(this.transform.position))
+        {
+            newGool = true;
+        }
 
         if (!nowMoving)
         {
@@ -68,9 +79,10 @@ public class PlayerContllore : MonoBehaviour
                     {
                         movedLength += (transform.up * Time.deltaTime * moveSpeed * startMove).y;
                         this.transform.position += transform.up * Time.deltaTime * moveSpeed * startMove;
-                        
+
                         if (movedLength >= 0.15f)
                         {
+
                             nowMoving = false;
                             movedLength = 0;
                         }
@@ -80,5 +92,7 @@ public class PlayerContllore : MonoBehaviour
 
 
         }
+       
+
     }
 }

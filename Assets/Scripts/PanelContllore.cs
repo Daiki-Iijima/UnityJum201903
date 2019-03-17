@@ -17,6 +17,11 @@ public class PanelContllore : MonoBehaviour
     [SerializeField]
     private bool isGoolPanel;
 
+    public bool getIsGoolPanel()
+    {
+        return isGoolPanel;
+    }
+
     void Start()
     {
         if (panelType == PanelTypeEnum.PanelType.None)

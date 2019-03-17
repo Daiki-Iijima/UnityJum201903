@@ -42,4 +42,22 @@ public class PanelManager : Singleton<PanelManager>
 
         return PanelTypeEnum.PanelType.None;
     }
+
+    /// <summary>
+    /// どのパネルの上にいるか
+    /// </summary>
+    /// <param name="pos">判定したい位置</param>
+    /// <returns>パネルがあった場合パネルの名前が帰ってくる</returns>
+    public bool GetGoolPos(Vector3 pos)
+    {
+        foreach (Transform child in panelList)
+        {
+            if (child.localPosition == pos)
+            {
+                return child.GetComponent<PanelContllore>().getIsGoolPanel();
+            }
+        }
+
+        return false;
+    }
 }
