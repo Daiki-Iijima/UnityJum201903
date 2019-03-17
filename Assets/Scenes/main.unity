@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44666582, g: 0.49651426, b: 0.5748712, a: 1}
+  m_IndirectSpecularColor: {r: 0.44666517, g: 0.49651355, b: 0.5748703, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389021dca1cf54f0f82b5a1f2abd0c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelType: 0
+  panelType: 2
   isStartPanel: 0
   isGoalPanel: 0
 --- !u!212 &10211727
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389021dca1cf54f0f82b5a1f2abd0c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelType: 1
+  panelType: 2
   isStartPanel: 1
   isGoalPanel: 0
 --- !u!212 &553419563
@@ -1692,7 +1692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389021dca1cf54f0f82b5a1f2abd0c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelType: 0
+  panelType: 1
   isStartPanel: 0
   isGoalPanel: 0
 --- !u!212 &1040029946
@@ -1952,7 +1952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389021dca1cf54f0f82b5a1f2abd0c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelType: 0
+  panelType: 2
   isStartPanel: 0
   isGoalPanel: 0
 --- !u!212 &1380864317
@@ -2082,7 +2082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389021dca1cf54f0f82b5a1f2abd0c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelType: 0
+  panelType: 2
   isStartPanel: 0
   isGoalPanel: 0
 --- !u!212 &1425911543

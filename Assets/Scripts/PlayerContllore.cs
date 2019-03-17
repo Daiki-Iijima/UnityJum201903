@@ -81,6 +81,12 @@ public class PlayerContllore : MonoBehaviour
                         nowMoving = true;
                     }
                     break;
+                case PanelTypeEnum.PanelType.goal:
+                    {
+
+                        Debug.Log("ある意味終わり");
+                    }
+                    break;
             }
         }
 
@@ -125,7 +131,7 @@ public class PlayerContllore : MonoBehaviour
                         movedLength += (transform.up * Time.deltaTime * moveSpeed * startMove);
                         this.transform.position += transform.up * Time.deltaTime * moveSpeed * startMove;
 
-                        if (targetPos.y < this.transform.position.y)
+                        if (targetPos.y < this.transform.position.y || targetPos.x < this.transform.position.x)
                         {
                             this.transform.position = targetPos;
                             nowMoving = false;

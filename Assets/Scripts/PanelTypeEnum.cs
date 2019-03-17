@@ -16,5 +16,7 @@ public class PanelTypeEnum : MonoBehaviour
         right,//右
 
         left,//左
+
+        goal,//ゴール
     }
 }

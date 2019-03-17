@@ -45,9 +45,10 @@ public class PanelManager : Singleton<PanelManager>
                 targetTransform = child.localPosition;
                 return child.GetComponent<PanelContllore>().GetPanelType;
             }
+
         }
 
-        return PanelTypeEnum.PanelType.None;
+        return PanelTypeEnum.PanelType.goal;
     }
 
     public Vector3 GetTargetTransform(Vector3 vectol)
