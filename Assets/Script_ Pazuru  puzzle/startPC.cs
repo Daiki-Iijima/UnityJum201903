@@ -11,6 +11,8 @@ public class startPC : MonoBehaviour {
 
     private bool start;
 
+    private bool delete;
+
     public void setStart(bool start)
     {
         this.start = start;
@@ -19,6 +21,7 @@ public class startPC : MonoBehaviour {
     void Start()
     {
         start = false;
+        delete = false;
         targetRenderer = GetComponent<Renderer>();
     }
 
@@ -27,18 +30,21 @@ public class startPC : MonoBehaviour {
         if (start)
         {
             this.transform.position += transform.right * Time.deltaTime * moveSpeed;
+
+            
         }
+        if (!GetComponent<SpriteRenderer>().isVisible)
+        {
+            if(delete)
+            SceneContlloer.scenechenge(1);
+        }
+        else
+        {
+            delete = true;
+        }
+
     }
 
 
-    void OnBecameVisible()
-    {
-        // 表示されるようになった時の処理
-        Debug.Log("画面に表示されてるよ");
-    }
-    void OnBecameInvisible()
-    {
-        SceneContlloer.scenechenge(1);
-    }
 
 }
