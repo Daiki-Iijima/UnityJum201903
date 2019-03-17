@@ -77,6 +77,7 @@ public class PlayerContllore : MonoBehaviour
 
                         targetPos = PanelManager.Instance.GetTargetTransform(transform.up);
 
+                        Debug.Log(targetPos);
                         nowMoving = true;
                     }
                     break;
@@ -108,12 +109,14 @@ public class PlayerContllore : MonoBehaviour
                         movedLength += (transform.up * Time.deltaTime * moveSpeed * startMove);
                         this.transform.position += transform.up * Time.deltaTime * moveSpeed * startMove;
 
-                        if (targetPos.x > this.transform.position.x)
+                        if (targetPos.x > this.transform.position.x || targetPos.y > this.transform.position.y)
                         {
                             this.transform.position = targetPos;
                             nowMoving = false;
                             movedLength = Vector3.zero;
                         }
+
+
                     }
                     break;
 
@@ -122,9 +125,7 @@ public class PlayerContllore : MonoBehaviour
                         movedLength += (transform.up * Time.deltaTime * moveSpeed * startMove);
                         this.transform.position += transform.up * Time.deltaTime * moveSpeed * startMove;
 
-
-
-                        if (targetPos.y > this.transform.position.y)
+                        if (targetPos.y < this.transform.position.y)
                         {
                             this.transform.position = targetPos;
                             nowMoving = false;

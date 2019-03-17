@@ -52,13 +52,16 @@ public class PanelManager : Singleton<PanelManager>
 
     public Vector3 GetTargetTransform(Vector3 vectol)
     {
-        Debug.Log((int)vectol.x + ":" + (int)vectol.y);
+        // Debug.Log((int)vectol.x + ":" + (int)vectol.y + ":" + targetTransform);
 
         if ((int)vectol.x == 1) { targetTransform = new Vector3(targetTransform.x + 0.15f, targetTransform.y, targetTransform.z); Debug.Log("D"); return targetTransform; }
         if ((int)vectol.y == 1) { targetTransform = new Vector3(targetTransform.x, targetTransform.y + 0.15f, targetTransform.z); Debug.Log("A"); return targetTransform; }
 
-        if ((int)vectol.x == -1) { targetTransform = new Vector3(targetTransform.x - 0.15f, targetTransform.y, targetTransform.z); Debug.Log("DD"); return targetTransform; }
-        if ((int)vectol.y == -1) { targetTransform = new Vector3(targetTransform.x, targetTransform.y - 0.15f, targetTransform.z); Debug.Log("AA"); return targetTransform; }
+        if ((int)vectol.x == -1) { targetTransform = new Vector3(targetTransform.x - 0.15f, targetTransform.y, targetTransform.z); Debug.Log("DD"); Debug.Log(vectol.x + ":" + vectol.y + ":" + targetTransform); return targetTransform; }
+        if ((int)vectol.y == -1) { targetTransform = new Vector3(targetTransform.x, targetTransform.y - 0.15f, targetTransform.z); Debug.Log("AA"); Debug.Log(vectol.x + ":" + vectol.y + ":" + targetTransform); return targetTransform; }
+
+        Debug.Log((int)vectol.x + ":" + (int)vectol.y + ":" + targetTransform);
+
         return targetTransform;
     }
 
