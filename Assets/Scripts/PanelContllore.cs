@@ -8,18 +8,17 @@ public class PanelContllore : MonoBehaviour
     [SerializeField]
     public PanelTypeEnum.PanelType panelType;
 
-
     public PanelTypeEnum.PanelType GetPanelType { get { return panelType; } }
 
     [SerializeField]
     private bool isStartPanel;
 
     [SerializeField]
-    private bool isGoolPanel;
+    private bool isGoalPanel;
 
     public bool getIsGoolPanel()
     {
-        return isGoolPanel;
+        return isGoalPanel;
     }
 
     void Start()
@@ -30,9 +29,16 @@ public class PanelContllore : MonoBehaviour
             return;
         }
 
+        //開始地点の場合
         if (isStartPanel)
         {
             GameObject.Find("Player").transform.position = this.transform.localPosition;
+        }
+
+        //終了地点の場合
+        if (isGoalPanel)
+        {
+
         }
 
     }

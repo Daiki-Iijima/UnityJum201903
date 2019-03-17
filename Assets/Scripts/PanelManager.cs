@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PanelManager : Singleton<PanelManager>
 {
@@ -9,6 +10,11 @@ public class PanelManager : Singleton<PanelManager>
     /// </summary>
 	[SerializeField]
     private List<Transform> panelList = new List<Transform>();
+
+    /// <summary>
+    /// 向かっている対象のトランスフォーム
+    /// </summary>
+    private Vector3 targetTransform;
 
     // Use this for initialization
     void Start()
@@ -36,11 +42,24 @@ public class PanelManager : Singleton<PanelManager>
         {
             if (child.localPosition == pos)
             {
+                targetTransform = child.localPosition;
                 return child.GetComponent<PanelContllore>().GetPanelType;
             }
         }
 
         return PanelTypeEnum.PanelType.None;
+    }
+
+    public Vector3 GetTargetTransform(Vector3 vectol)
+    {
+        Debug.Log((int)vectol.x + ":" + (int)vectol.y);
+
+        if ((int)vectol.x == 1) { targetTransform = new Vector3(targetTransform.x + 0.15f, targetTransform.y, targetTransform.z); Debug.Log("D"); return targetTransform; }
+        if ((int)vectol.y == 1) { targetTransform = new Vector3(targetTransform.x, targetTransform.y + 0.15f, targetTransform.z); Debug.Log("A"); return targetTransform; }
+
+        if ((int)vectol.x == -1) { targetTransform = new Vector3(targetTransform.x - 0.15f, targetTransform.y, targetTransform.z); Debug.Log("DD"); return targetTransform; }
+        if ((int)vectol.y == -1) { targetTransform = new Vector3(targetTransform.x, targetTransform.y - 0.15f, targetTransform.z); Debug.Log("AA"); return targetTransform; }
+        return targetTransform;
     }
 
     /// <summary>

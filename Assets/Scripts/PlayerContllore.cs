@@ -12,7 +12,9 @@ public class PlayerContllore : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 0;
 
-    private float movedLength = 0;
+    private Vector3 movedLength;
+
+    private Vector3 targetPos;
 
     private float startMove;
 
@@ -53,17 +55,28 @@ public class PlayerContllore : MonoBehaviour
             {
                 case PanelTypeEnum.PanelType.Straight:
                     {
+                        targetPos = PanelManager.Instance.GetTargetTransform(transform.up);
                         nowMoving = true;
                     }
                     break;
                 case PanelTypeEnum.PanelType.left:
                     {
+
                         this.transform.eulerAngles = new Vector3(0, 0, this.transform.eulerAngles.z + 90f);
+
+                        targetPos = PanelManager.Instance.GetTargetTransform(transform.up);
+
                         nowMoving = true;
+
+
                     }
                     break;
                 case PanelTypeEnum.PanelType.right:
                     {
+                        this.transform.eulerAngles = new Vector3(0, 0, this.transform.eulerAngles.z - 90f);
+
+                        targetPos = PanelManager.Instance.GetTargetTransform(transform.up);
+
                         nowMoving = true;
                     }
                     break;
@@ -77,22 +90,54 @@ public class PlayerContllore : MonoBehaviour
             {
                 case PanelTypeEnum.PanelType.Straight:
                     {
-                        movedLength += (transform.up * Time.deltaTime * moveSpeed * startMove).y;
+                        movedLength += (transform.up * Time.deltaTime * moveSpeed * startMove);
                         this.transform.position += transform.up * Time.deltaTime * moveSpeed * startMove;
 
-                        if (movedLength >= 0.15f)
+                        if (targetPos.y < this.transform.position.y)
                         {
-
+                            this.transform.position = targetPos;
+                            targetPos = Vector3.zero;
                             nowMoving = false;
-                            movedLength = 0;
+                            movedLength = Vector3.zero;
                         }
                     }
                     break;
+
+                case PanelTypeEnum.PanelType.left:
+                    {
+                        movedLength += (transform.up * Time.deltaTime * moveSpeed * startMove);
+                        this.transform.position += transform.up * Time.deltaTime * moveSpeed * startMove;
+
+                        if (targetPos.x > this.transform.position.x)
+                        {
+                            this.transform.position = targetPos;
+                            nowMoving = false;
+                            movedLength = Vector3.zero;
+                        }
+                    }
+                    break;
+
+                case PanelTypeEnum.PanelType.right:
+                    {
+                        movedLength += (transform.up * Time.deltaTime * moveSpeed * startMove);
+                        this.transform.position += transform.up * Time.deltaTime * moveSpeed * startMove;
+
+
+
+                        if (targetPos.y > this.transform.position.y)
+                        {
+                            this.transform.position = targetPos;
+                            nowMoving = false;
+                            movedLength = Vector3.zero;
+                        }
+                    }
+                    break;
+
             }
 
 
         }
-       
+
 
     }
 }
