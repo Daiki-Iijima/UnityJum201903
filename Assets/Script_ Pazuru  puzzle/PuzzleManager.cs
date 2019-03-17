@@ -15,8 +15,6 @@ public class PuzzleManager : Singleton<PuzzleManager>
 
     private bool move;
 
-    private bool gameStart;
-
     private Transform movePos;
 
     private Vector3 target;
@@ -38,17 +36,11 @@ public class PuzzleManager : Singleton<PuzzleManager>
     {
         return move;
     }
-    public bool getGameStart()
-    {
-        return gameStart;
-    }
-
 
 
     // Use this for initialization
     void Start()
     {
-        gameStart = false;
         move = false;
         int nullNum = 0;
 
@@ -175,7 +167,7 @@ public class PuzzleManager : Singleton<PuzzleManager>
 
         if (downPso == null && rightPso == null && leftPso == null && upPso != null)
         {
-            gameStart = true;
+            SceneContlloer.scenechenge(1);
         }
 
     }

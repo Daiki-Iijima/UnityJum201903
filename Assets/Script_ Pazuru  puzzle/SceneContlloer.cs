@@ -13,11 +13,6 @@ public class SceneContlloer : MonoBehaviour
         nullPanel = GameObject.Find("Board").GetComponent<PuzzleManager>().nullPos;
     }
 
-    void Update()
-    {
-        gameStart();
-    }
-
     public void reScenes()
     {
         Scene loadScene = SceneManager.GetActiveScene();
@@ -47,14 +42,4 @@ public class SceneContlloer : MonoBehaviour
         SceneManager.LoadScene(number);
     }
 
-    void gameStart()
-    {
-        if (transform.GetComponent<PuzzleManager>() != null)
-        {
-            if (transform.GetComponent<PuzzleManager>().getGameStart())
-            {
-                SceneManager.LoadScene(1);
-            }
-        }
-    }
 }
