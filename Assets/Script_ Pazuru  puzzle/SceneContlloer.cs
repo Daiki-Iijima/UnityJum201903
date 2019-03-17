@@ -10,7 +10,7 @@ public class SceneContlloer : MonoBehaviour
 
     void Start()
     {
-        nullPanel =  GameObject.Find("Board").GetComponent<PuzzleManager>().nullPos;
+        nullPanel = GameObject.Find("Board").GetComponent<PuzzleManager>().nullPos;
     }
 
     void Update()
@@ -29,16 +29,22 @@ public class SceneContlloer : MonoBehaviour
         Transform gamestage = GameObject.Find("Board").transform;
         foreach (Transform child in gamestage)
         {
-            if (nullPanel!= child) {
+            if (nullPanel != child)
+            {
                 if (child.transform.localPosition == Vector3.zero)
                 {
                     Sound.PlaySound(4);
                     SceneManager.LoadScene(child.GetComponent<StageNo>().stageNo);
                 }
             }
-             
+
         }
 
+    }
+
+    public static void scenechenge(int number)
+    {
+        SceneManager.LoadScene(number);
     }
 
     void gameStart()
