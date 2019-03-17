@@ -14,6 +14,13 @@ public class PlayerContllore : MonoBehaviour
 
     private float movedLength = 0;
 
+    private float startMove;
+
+    public void setStartMove(float startMove)
+    {
+        this.startMove = startMove;
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -50,7 +57,6 @@ public class PlayerContllore : MonoBehaviour
                     }
                     break;
             }
-
         }
 
         if (nowMoving)
@@ -60,12 +66,11 @@ public class PlayerContllore : MonoBehaviour
             {
                 case PanelTypeEnum.PanelType.Straight:
                     {
-                        movedLength += (transform.up * Time.deltaTime * moveSpeed).y;
-                        this.transform.position += transform.up * Time.deltaTime * moveSpeed;
-
+                        movedLength += (transform.up * Time.deltaTime * moveSpeed * startMove).y;
+                        this.transform.position += transform.up * Time.deltaTime * moveSpeed * startMove;
+                        
                         if (movedLength >= 0.15f)
                         {
-                            
                             nowMoving = false;
                             movedLength = 0;
                         }
