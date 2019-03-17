@@ -8,6 +8,9 @@ public class PuzzleManager : Singleton<PuzzleManager>
     [SerializeField]
     private float moveSpped;
 
+    [SerializeField]
+    private float moveError;
+
     public Transform nullPos;
 
     private bool move;
@@ -106,10 +109,10 @@ public class PuzzleManager : Singleton<PuzzleManager>
 
             if (child != nullPos)
             {
-
-                if (nullPos.localPosition.x == child.localPosition.x)
+                float x = Math.Abs(nullPos.localPosition.x - child.localPosition.x);
+                if (x <= moveError)
                 {
-                    
+
                     if (nullPos.localPosition.y < child.localPosition.y)
                     {
                         if (upPso == null)
@@ -132,7 +135,8 @@ public class PuzzleManager : Singleton<PuzzleManager>
                         if (num <= num2) downPso = child;
                     }
                 }
-                if (nullPos.localPosition.y == child.localPosition.y)
+                float y = Math.Abs(nullPos.localPosition.y - child.localPosition.y);
+                if (y <= moveError)
                 {
 
                     if (nullPos.localPosition.x < child.localPosition.x)
@@ -169,7 +173,7 @@ public class PuzzleManager : Singleton<PuzzleManager>
         if (leftPso != null)
             leftPso.GetComponent<PuzzleContllore>().setIsMoving(true);
 
-        if(downPso==null&& rightPso == null && leftPso == null && upPso != null)
+        if (downPso == null && rightPso == null && leftPso == null && upPso != null)
         {
             gameStart = true;
         }
