@@ -8,11 +8,12 @@ public class PuzzleManager : Singleton<PuzzleManager>
     [SerializeField]
     private float moveSpped;
 
+    [SerializeField]
+    private float moveError;
+
     public Transform nullPos;
 
     private bool move;
-
-    private bool gameStart;
 
     private Transform movePos;
 
@@ -35,17 +36,11 @@ public class PuzzleManager : Singleton<PuzzleManager>
     {
         return move;
     }
-    public bool getGameStart()
-    {
-        return gameStart;
-    }
-
 
 
     // Use this for initialization
     void Start()
     {
-        gameStart = false;
         move = false;
         int nullNum = 0;
 
@@ -106,10 +101,10 @@ public class PuzzleManager : Singleton<PuzzleManager>
 
             if (child != nullPos)
             {
-
-                if (nullPos.localPosition.x == child.localPosition.x)
+                float x = Math.Abs(nullPos.localPosition.x - child.localPosition.x);
+                if (x <= moveError)
                 {
-                    
+
                     if (nullPos.localPosition.y < child.localPosition.y)
                     {
                         if (upPso == null)
@@ -132,7 +127,8 @@ public class PuzzleManager : Singleton<PuzzleManager>
                         if (num <= num2) downPso = child;
                     }
                 }
-                if (nullPos.localPosition.y == child.localPosition.y)
+                float y = Math.Abs(nullPos.localPosition.y - child.localPosition.y);
+                if (y <= moveError)
                 {
 
                     if (nullPos.localPosition.x < child.localPosition.x)
@@ -169,9 +165,9 @@ public class PuzzleManager : Singleton<PuzzleManager>
         if (leftPso != null)
             leftPso.GetComponent<PuzzleContllore>().setIsMoving(true);
 
-        if(downPso==null&& rightPso == null && leftPso == null && upPso != null)
+        if (downPso == null && rightPso == null && leftPso == null && upPso != null)
         {
-            gameStart = true;
+            GameObject.Find("PC1").GetComponent<startPC>().setStart(true);
         }
 
     }
