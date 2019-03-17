@@ -125,7 +125,6 @@ GameObject:
   - component: {fileID: 10211726}
   - component: {fileID: 10211728}
   - component: {fileID: 10211730}
-  - component: {fileID: 10211729}
   m_Layer: 0
   m_Name: Panel (9)
   m_TagString: Untagged
@@ -219,19 +218,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &10211729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 10211724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &10211730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -362,7 +348,6 @@ GameObject:
   - component: {fileID: 104885269}
   - component: {fileID: 104885271}
   - component: {fileID: 104885273}
-  - component: {fileID: 104885272}
   m_Layer: 0
   m_Name: Panel (3)
   m_TagString: Untagged
@@ -456,19 +441,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &104885272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 104885267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &104885273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -572,7 +544,6 @@ GameObject:
   - component: {fileID: 241209735}
   - component: {fileID: 241209737}
   - component: {fileID: 241209739}
-  - component: {fileID: 241209738}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -666,25 +637,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &241209738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 241209733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!61 &241209739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -722,7 +674,6 @@ GameObject:
   - component: {fileID: 358575863}
   - component: {fileID: 358575865}
   - component: {fileID: 358575867}
-  - component: {fileID: 358575866}
   m_Layer: 0
   m_Name: Panel (1)
   m_TagString: Untagged
@@ -816,36 +767,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &358575866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 358575861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 358575865}
-          m_MethodName: Oncc
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!61 &358575867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -883,7 +804,6 @@ GameObject:
   - component: {fileID: 432997613}
   - component: {fileID: 432997615}
   - component: {fileID: 432997617}
-  - component: {fileID: 432997616}
   m_Layer: 0
   m_Name: Panel (11)
   m_TagString: Untagged
@@ -977,19 +897,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &432997616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 432997611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &432997617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1120,7 +1027,6 @@ GameObject:
   - component: {fileID: 553419562}
   - component: {fileID: 553419564}
   - component: {fileID: 553419566}
-  - component: {fileID: 553419565}
   m_Layer: 0
   m_Name: Panel (10)
   m_TagString: Untagged
@@ -1214,19 +1120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &553419565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 553419560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &553419566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1264,7 +1157,6 @@ GameObject:
   - component: {fileID: 705822085}
   - component: {fileID: 705822087}
   - component: {fileID: 705822089}
-  - component: {fileID: 705822088}
   m_Layer: 0
   m_Name: Panel (5)
   m_TagString: Untagged
@@ -1358,19 +1250,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &705822088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 705822083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &705822089
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1408,7 +1287,6 @@ GameObject:
   - component: {fileID: 813266371}
   - component: {fileID: 813266373}
   - component: {fileID: 813266375}
-  - component: {fileID: 813266374}
   m_Layer: 0
   m_Name: Panel (7)
   m_TagString: Untagged
@@ -1502,19 +1380,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &813266374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 813266369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &813266375
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1552,7 +1417,6 @@ GameObject:
   - component: {fileID: 814182533}
   - component: {fileID: 814182535}
   - component: {fileID: 814182537}
-  - component: {fileID: 814182536}
   m_Layer: 0
   m_Name: Panel (2)
   m_TagString: Untagged
@@ -1646,19 +1510,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &814182536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 814182531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &814182537
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1786,7 +1637,6 @@ GameObject:
   - component: {fileID: 1040029945}
   - component: {fileID: 1040029947}
   - component: {fileID: 1040029949}
-  - component: {fileID: 1040029948}
   m_Layer: 0
   m_Name: Panel (12)
   m_TagString: Untagged
@@ -1880,19 +1730,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &1040029948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1040029943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &1040029949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1930,7 +1767,6 @@ GameObject:
   - component: {fileID: 1374735178}
   - component: {fileID: 1374735180}
   - component: {fileID: 1374735182}
-  - component: {fileID: 1374735181}
   m_Layer: 0
   m_Name: Panel (8)
   m_TagString: Untagged
@@ -2024,19 +1860,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &1374735181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1374735176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &1374735182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2074,7 +1897,6 @@ GameObject:
   - component: {fileID: 1380864316}
   - component: {fileID: 1380864318}
   - component: {fileID: 1380864320}
-  - component: {fileID: 1380864319}
   m_Layer: 0
   m_Name: Panel (13)
   m_TagString: Untagged
@@ -2168,19 +1990,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &1380864319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1380864314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &1380864320
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2218,7 +2027,6 @@ GameObject:
   - component: {fileID: 1425911542}
   - component: {fileID: 1425911544}
   - component: {fileID: 1425911546}
-  - component: {fileID: 1425911545}
   m_Layer: 0
   m_Name: Panel (14)
   m_TagString: Untagged
@@ -2312,19 +2120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &1425911545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1425911540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &1425911546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2599,7 +2394,6 @@ GameObject:
   - component: {fileID: 2080107968}
   - component: {fileID: 2080107970}
   - component: {fileID: 2080107972}
-  - component: {fileID: 2080107971}
   m_Layer: 0
   m_Name: Panel (15)
   m_TagString: Untagged
@@ -2693,19 +2487,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &2080107971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2080107966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &2080107972
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2743,7 +2524,6 @@ GameObject:
   - component: {fileID: 2104281348}
   - component: {fileID: 2104281350}
   - component: {fileID: 2104281352}
-  - component: {fileID: 2104281351}
   m_Layer: 0
   m_Name: Panel (4)
   m_TagString: Untagged
@@ -2837,19 +2617,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNull: 0
   isMoving: 0
---- !u!114 &2104281351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2104281346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
-  delegates: []
 --- !u!61 &2104281352
 BoxCollider2D:
   m_ObjectHideFlags: 0
