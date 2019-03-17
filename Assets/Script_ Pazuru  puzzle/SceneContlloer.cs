@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class SceneContlloer : MonoBehaviour
 {
 
+    private Transform nullPanel;
+
+    void Start()
+    {
+        nullPanel =  GameObject.Find("Board").GetComponent<PuzzleManager>().nullPos;
+    }
 
     void Update()
     {
@@ -23,9 +29,12 @@ public class SceneContlloer : MonoBehaviour
         Transform gamestage = GameObject.Find("Board").transform;
         foreach (Transform child in gamestage)
         {
-            if(child.transform.localPosition == Vector3.zero)
-            {
-                SceneManager.LoadScene(child.GetComponent<StageNo>().stageNo);
+            if (nullPanel!= child) {
+                if (child.transform.localPosition == Vector3.zero)
+                {
+                    Sound.PlaySound(4);
+                    SceneManager.LoadScene(child.GetComponent<StageNo>().stageNo);
+                }
             }
              
         }
@@ -34,10 +43,12 @@ public class SceneContlloer : MonoBehaviour
 
     void gameStart()
     {
-        if (transform.GetComponent<PuzzlelManager>() != null)
+        if (transform.GetComponent<PuzzleManager>() != null)
         {
-            if (transform.GetComponent<PuzzlelManager>().getGameStart())
+            if (transform.GetComponent<PuzzleManager>().getGameStart())
+            {
                 SceneManager.LoadScene(1);
+            }
         }
     }
 }

@@ -26,7 +26,7 @@ public class PuzzleContllore : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (!transform.parent.GetComponent<PuzzlelManager>().getMove())
+        if (!transform.parent.GetComponent<PuzzleManager>().getMove())
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -40,9 +40,9 @@ public class PuzzleContllore : MonoBehaviour
     {
         if (isMoving)
         {
-
-            transform.parent.GetComponent<PuzzlelManager>().setMovePos(this.transform);
-            transform.parent.GetComponent<PuzzlelManager>().setMove(true);
+            Sound.PlaySound(3);
+            transform.parent.GetComponent<PuzzleManager>().setMovePos(this.transform);
+            transform.parent.GetComponent<PuzzleManager>().setMove(true);
         }
 
     }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuzzlelManager : Singleton<PuzzlelManager>
+public class PuzzleManager : Singleton<PuzzleManager>
 {
     [SerializeField]
     private float moveSpped;
