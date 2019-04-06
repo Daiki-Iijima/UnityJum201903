@@ -1692,7 +1692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389021dca1cf54f0f82b5a1f2abd0c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelType: 1
+  panelType: 3
   isStartPanel: 0
   isGoalPanel: 0
 --- !u!212 &1040029946
@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389021dca1cf54f0f82b5a1f2abd0c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelType: 0
+  panelType: 1
   isStartPanel: 0
   isGoalPanel: 0
 --- !u!212 &1374735179
@@ -1952,7 +1952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389021dca1cf54f0f82b5a1f2abd0c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelType: 2
+  panelType: 3
   isStartPanel: 0
   isGoalPanel: 0
 --- !u!212 &1380864317
@@ -2450,7 +2450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389021dca1cf54f0f82b5a1f2abd0c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelType: 0
+  panelType: 2
   isStartPanel: 0
   isGoalPanel: 0
 --- !u!212 &2080107969

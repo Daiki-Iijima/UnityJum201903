@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PanelTypeEnum : MonoBehaviour
+﻿
+public static class PanelTypeEnum
 {
     /// <summary>
     /// 床パネル進行方向

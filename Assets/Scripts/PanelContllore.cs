@@ -25,7 +25,7 @@ public class PanelContllore : MonoBehaviour
     {
         if (panelType == PanelTypeEnum.PanelType.None)
         {
-            //Debug.Log("値が設定されていません : " + this.gameObject.name);
+            Debug.Log("値が設定されていません : " + this.gameObject.name);
             return;
         }
 
