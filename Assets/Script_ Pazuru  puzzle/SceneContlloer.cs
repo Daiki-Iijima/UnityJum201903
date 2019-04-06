@@ -7,10 +7,12 @@ public class SceneContlloer : MonoBehaviour
 {
 
     private Transform nullPanel;
+    private Vector3 nullpos;
 
     void Start()
     {
         nullPanel = GameObject.Find("Board").GetComponent<PuzzleManager>().nullPos;
+        nullpos = nullPanel.transform.localPosition;
     }
 
     public void reScenes()
@@ -26,7 +28,7 @@ public class SceneContlloer : MonoBehaviour
         {
             if (nullPanel != child)
             {
-                if (child.transform.localPosition == Vector3.zero)
+                if (child.transform.localPosition == nullpos)
                 {
                     Sound.PlaySound(4);
                     SceneManager.LoadScene(child.GetComponent<StageNo>().stageNo);
