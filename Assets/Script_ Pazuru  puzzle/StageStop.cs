@@ -17,8 +17,8 @@ public class StageStop : MonoBehaviour
     {
         create = false;
         screen = Resources.Load("screen", typeof(GameObject)) as GameObject;
-        goal = Resources.Load("Goal_img", typeof(Sprite)) as Sprite;
-        start = Resources.Load("start_img", typeof(Sprite)) as Sprite;
+        goal = Resources.Load("GoalImg", typeof(Sprite)) as Sprite;
+        start = Resources.Load("StartImg", typeof(Sprite)) as Sprite;
 
         screen.GetComponent<SpriteRenderer>().sprite = start;
         Instantiate(screen);
